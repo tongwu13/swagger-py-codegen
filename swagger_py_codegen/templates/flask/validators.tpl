@@ -14,7 +14,7 @@ from flask_restful import abort
 from flask_restful.utils import unpack
 from jsonschema import Draft4Validator
 
-from .schemas import (
+from {{ package }}.{{ module }}.schemas import (
     validators, filters, scopes, resolver, security, merge_default, normalize)
 
 

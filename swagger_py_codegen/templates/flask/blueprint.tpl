@@ -4,8 +4,8 @@ from __future__ import absolute_import
 from flask import Blueprint
 import flask_restful as restful
 
-from .routes import routes
-from .validators import security
+from {{ package }}.{{ module }}.routes import routes
+from {{ package }}.{{ module }}.validators import security
 
 
 @security.scopes_loader

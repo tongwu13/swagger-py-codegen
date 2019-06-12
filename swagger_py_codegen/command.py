@@ -198,7 +198,7 @@ def generate(destination, swagger_doc, force=False, package=None,
         click.secho('%-12s%s' % (status, ui_dest))
 
     for code in generator.generate():
-        source = template.render_code(code)
+        source = template.render_code(code, package=package, module=swagger.module_name)
         dest = join(destination, code.dest(env))
         dest_exists = exists(dest)
         can_override = force or code.override

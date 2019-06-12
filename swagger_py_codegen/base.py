@@ -62,6 +62,6 @@ class Template(object):
         template = self.env.get_template(template_name)
         return template.render(**kwargs)
 
-    def render_code(self, code):
+    def render_code(self, code, package=None, module=None):
         code.before_render(self)
-        return self.render(code.template, **code.data)
+        return self.render(code.template, package=package, module=module, **code.data)
